@@ -1,0 +1,31 @@
+{
+  "name": "format-and-save",
+  "displayName": "Format and Save",
+  "description": "Auto run Format Document whenever control+s is pressed",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Keymaps"
+  ],
+  "activationEvents": [
+    "onCommand:extension.formatAndSave"
+  ],
+  "main": "src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.formatAndSave",
+        "title": "Format and Save"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+s",
+        "command": "extension.formatAndSave",
+        "when": "editorTextFocus"
+      }
+    ]
+  }
+}
